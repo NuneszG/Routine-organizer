@@ -1,0 +1,30 @@
+Routine organizer 
+    - start django project 
+        - organize project folder structure
+
+        - create frontend of application in Figma
+
+        - create Task model
+                - title
+                - content 
+                - date
+
+            - organize crud urls 
+                - get all tasks
+                - create task
+                - edit
+                - update 
+                - delete
+
+                each task will have an alarm clock and timer in case you need it.
+
+                - create connection between PostgreSQL and django
+                    - connection
+
+
+                    - create Stopwatch and Alarm clock with JavaScript 
+
+                    - insert Docker to manage container of the application
+                        dockerfile
+                        docker compose
+
