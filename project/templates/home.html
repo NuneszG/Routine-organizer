@@ -1,0 +1,25 @@
+{% extends 'base.html' %}   
+{% load static %}
+    {% block content %}
+        <div class="text-center">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <h2>Routine Organizer</h2>
+                    <img src="{% static '/media//Filling Survey.png' %}">   
+                    
+                <h5>Design and organize your day better! Distribute your daily activities <br>
+                    into organized tasks with routine organizer.
+                </h5>
+
+                <a href="#" class="text-decoration-none btn btn-dark col-3 mt-4 mb-5">Start</a>
+            </div>
+
+            <div class="d-flex align-items-center flex-column" style="height: 730px;">
+                <div class="mt-auto text-secondary">
+                    website desenvolvido por 
+                        <a target="_blank" href="https://www.linkedin.com/in/guilherme-nunes-a89827274/" 
+                            class="text-secondary">Guilherme Nunes
+                        </a>
+                </div>
+            </div> 
+        </div>
+    {% endblock %}
