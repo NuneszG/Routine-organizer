@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="buttons">
-                            <button id="Start" class="btn text-primary">
+                            <button id="Start" class="btn text-primary" onclick="click()">
                                 Start
                             </button>
                             <button id="Pause" class="btn text-danger">
@@ -49,15 +49,14 @@
                             <button id="Continue" class="btn text-success">
                                 Continue
                             </button>
-                            <button id="Restart" class="btn text-warning">
+                            <button id="Restart" class="btn text-warning" onclick="click()">
                                 Restart
                             </button>
-                        </div>
-                        
+                        </div>                      
                     </div>
-  
-                    
                 </div>
             </div>
         </div>
+
+        <script src="{% static '/js/main.js' %}" defer></script>
     {% endblock %}
