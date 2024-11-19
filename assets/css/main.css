@@ -1,0 +1,23 @@
+.timer {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+}
+
+.buttons {
+    margin: 2px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+#minutes, #seconds, #miliseconds {
+    margin: 0px 2px 0px;
+}

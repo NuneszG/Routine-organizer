@@ -18,24 +18,34 @@
                                 Your actions
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Create new task</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'form' %}">Create new task</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
               </nav>
-                {% if tasks %}
-                <div class="container mt-4">
-                    <div class="row row-cols-1 row-cols-md-3 g-4 border border-gray">
-                        {% for task in task %}
-                            <h4 class="text-primary">
-                                {{ task.title }}
-                            </h4>
-                            <a href="#" class="text-decoration-none btn btn-dark">Access</a>
-                        {% endfor %} 
+            {% if task %}
+                {% for task in task %}
+                    <div class="col-4 mx-auto">
+                        <h3 class="mt-3 fw-semibold">Your <a class="text-decoration-none">tasks</a></h3>
+                        <div class="rounded text-center p-2 border border-gray mt-3">
+                            <p class="fs-4">
+                                <strong>
+                                    {{ task.title }}
+                                </strong>
+                            </p> 
+                                <hr>
+                            <p>
+                                <small>
+                                    {{ task.date }}
+                                </small> 
+                            </p>
+                            
+                            <a href="{% url 'task' task.id %}" class="text-decoration-none mt-3">Access</a>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
             {% else %}
                 <h3 class="mt-4 text-secondary">You don't have any task created yet</h3>
             {% endif %}

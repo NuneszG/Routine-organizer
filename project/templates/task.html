@@ -1,0 +1,63 @@
+{% extends 'base.html' %}   
+{% load static %}
+    {% block content %}
+        <a href="{% url 'tasks' %}" class="text-decoration-none mx-2 mt-2 btn btn-primary">Back</a>
+        <div class="text-center">
+            <div class="mx-auto">
+                <h3 class="mt-1 fw-semibold mb-4">
+                    Task
+                    <a class="text-decoration-none">{{ task.title }}</a>
+                </h3>
+
+                <div class="rounded text-center mt-3">
+                    <h5>
+                        {{ task.title }}    
+                    </h5> 
+                    <p>
+                        <small>
+                            {{ task.date }}
+                        </small>
+                    </p>
+                        <hr class="col-3 mx-auto">
+                    <p>
+                        {{ task.content }}
+                    </p>
+
+                    <div class="container mt-5">
+                        <h4 class="text-primary fw-semibold">Timer</h4>
+                        <div class="timer">
+                            <div id="minutes">
+                                00
+                            </div>
+                            :
+                            <div id="seconds">
+                                00
+                            </div>
+                            :
+                            <div id="miliseconds">
+                                000
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="Start" class="btn text-primary">
+                                Start
+                            </button>
+                            <button id="Pause" class="btn text-danger">
+                                Pause
+                            </button>
+                            <button id="Continue" class="btn text-success">
+                                Continue
+                            </button>
+                            <button id="Restart" class="btn text-warning">
+                                Restart
+                            </button>
+                        </div>
+                        
+                    </div>
+  
+                    
+                </div>
+            </div>
+        </div>
+    {% endblock %}
