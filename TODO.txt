@@ -24,7 +24,10 @@ Routine organizer
 
                     - create Stopwatch and Alarm clock with JavaScript 
 
-                    - insert Docker to manage container of the application
-                        dockerfile
-                        docker compose
+                        - insert Makefile to compile project base codes
+                            makefile
+
+                        - insert Docker to manage container of the application
+                            dockerfile
+                            docker compose
 
