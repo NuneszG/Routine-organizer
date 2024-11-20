@@ -38,10 +38,15 @@ Windows
 ./venv/Scripts/activate
 ```
 
-### Docker
+# Docker
+
+Docker is a tool used to create and manage project containers. It allows the project container to be copied to your machine, without having to install all the dependencies with certain versions that were used in the real project, for the application to work correctly.
+
+### Create database image
 ```
 docker-compose up database --build
 ```
+### Create application image 
 ```
 docker-compose up application --build
 ```
@@ -50,6 +55,17 @@ docker-compose up application --build
 ```
 docker-compose up
 ``` 
+
+If this message returns in your console, it is because the container is running correctly on the declared port.
+
+```
+database-1     | 2024-11-20 22:19:39.190 UTC [1] LOG:  database system is ready to accept connections
+application-1  | Operations to perform:
+application-1  |   Apply all migrations: admin, auth, contenttypes, project, sessions
+application-1  | Running migrations:
+application-1  |   No migrations to apply.
+application-1  | Watching for file changes with StatReloader
+```
 
 ### Run application with Makefile 
 ```
