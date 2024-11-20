@@ -1,0 +1,26 @@
+{% extends 'base.html' %}   
+    {% block content %}
+        <div class="text-center">  
+            <h3 class="mt-5">Update <a class="text-decoration-none text-primary">{{ task.title }}</a></h3>          
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <form action="{% url 'update' task.id %}" method="POST">{% csrf_token %}
+                    <p>
+                        <label for="title">Title: </label> <br>
+                        <input type="text" name="title" class="mt-2 form-control" id="title" value="{{ task.title }}"> 
+                    </p>
+                    <p>
+                        <label for="caption">Caption: </label> <br>
+                        <input type="text" name="caption" class="mt-2 form-control" id="caption" value="{{ task.caption }}"> 
+                    </p>
+                    <p>
+                        <label for="content">Content: </label> <br>
+                        <input type="text" name="content" class="mt-2 form-control" id="content" value="{{ task.content }}"> 
+                    </p>
+
+                    <button type="submit" class="mt-3 btn btn-primary col-7 mb-5">Update</button>
+                </form>
+
+                <a href="{% url 'tasks' %}" class="text-decoration-none mt-4 text-secondary">Back</a>
+            </div>
+        </div>
+    {% endblock %}

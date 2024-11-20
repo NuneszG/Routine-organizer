@@ -24,6 +24,9 @@ Routine organizer
 
                     - create Stopwatch and Alarm clock with JavaScript 
 
+                    - create Alarm clock with JavaScript
+
+
                         - insert Makefile to compile project base codes
                             makefile
 
@@ -33,4 +36,4 @@ Routine organizer
 
 
 fix ERROR button restart timer
-            [ ]
+            [FIXED]

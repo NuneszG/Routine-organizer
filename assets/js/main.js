@@ -3,9 +3,9 @@ const PauseButton = document.getElementById('Pause');
 const ContinueButton = document.getElementById('Continue');
 const RestartButton = document.getElementById('Restart');
 
-const Minutes = document.querySelector('#minutes');
-const Seconds = document.querySelector('#seconds');
-const Miliseconds = document.querySelector('#miliseconds');
+const Minutes = document.getElementById('minutes');
+const Seconds = document.getElementById('seconds');
+const Miliseconds = document.getElementById('miliseconds');
 
 let interval;
 let minutes = 0;
@@ -18,10 +18,6 @@ StartButton.addEventListener('click', StartTimer);
 PauseButton.addEventListener('click', PauseTimer);
 ContinueButton.addEventListener('click', ContinueTimer);
 RestartButton.addEventListener('click', RestartTimer)
-
-PauseButton.style.display = 'none';
-ContinueButton.style.display = 'none';
-RestartButton.style.display = 'none';
 
 function StartTimer(){
     interval = setInterval(() => {
@@ -69,14 +65,14 @@ function ContinueTimer(){
 }
 
 function RestartTimer(){
-    pause = true;
-
     clearInterval(interval);
 
-    Minutes = 0;
-    Seconds = 0;
-    Miliseconds = 0;
-    
+    pause = true;
+
+    minutes = 0;
+    seconds = 0;
+    miliseconds = 0;
+
     Minutes.textContent = '00';
     Seconds.textContent = '00';
     Miliseconds.textContent = '000';
