@@ -38,6 +38,19 @@ Windows
 ./venv/Scripts/activate
 ```
 
+### Docker
+```
+docker-compose up database --build
+```
+```
+docker-compose up application --build
+```
+
+### Run application container
+```
+docker-compose up
+``` 
+
 ### Run application with Makefile 
 ```
 Make run
