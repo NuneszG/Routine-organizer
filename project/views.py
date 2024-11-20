@@ -14,15 +14,20 @@ def Form(request):
     return render(request, 'form.html')
 
 def Create(request):
-    title = request.POST.get('title')
-    caption = request.POST.get('caption')
-    content = request.POST.get('content')
+    try:
+        title = request.POST.get('title')
+        caption = request.POST.get('caption')
+        content = request.POST.get('content')
 
-    task = Task.objects.create(
-        title = title,
-        caption = caption,
-        content = content
-    )
+        task = Task.objects.create(
+            title = title,
+            caption = caption,
+            content = content
+        )
+    except Exception as e:
+        print(e)
+        print('Something was wrong..')
+        return False
 
     return redirect('tasks')
 
@@ -58,8 +63,8 @@ def DeleteTask(request, id):
     try:
         task = Task.objects.get(id=id)
         task.delete()
-
-    except:
+    except Exception as e:
+        print(e)
         print('Task not found, try again.')
         return False
 
